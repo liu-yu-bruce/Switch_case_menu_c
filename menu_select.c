@@ -1,27 +1,34 @@
-#inlcude <stdio.h>
+#include <stdio.h>
 
 
-void menu_select()
+void menu_action_1();
+void menu_action_2();
+int menu_exit();
+
+void menu_main()
 {
-  bool exit_condition = 1;
+  int exit_condition = 1;
   int menu_action_selection = 0;
   while(exit_condition)
   {
     printf("Input action selection\n");
-    scanf(%d,&menu_action_selection);
+    scanf("%d",&menu_action_selection);
     switch (menu_action_selection)
     {
-      case : 1
+      case 1:
       {
-
+        menu_action_1();
+        break;
       }
-      case : 2
+      case 2:
       {
-
+        menu_action_2();
+        break;
       }
       default:
       {
-        menu_exit()
+        exit_condition = menu_exit();
+        break;
       }
     }
   }
